@@ -503,9 +503,6 @@ Style/StringLiterals:
   Description: "Checks if uses of quotes match the configured preference."
   Enabled: true
 
-Layout/Tab:
-  Description: "No hard tabs."
-  Enabled: true
 
 Layout/TrailingBlankLines:
   Description: "Checks trailing blank lines and final newline."

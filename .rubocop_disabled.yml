@@ -84,3 +84,7 @@ Rails/ReflectionClassName:
 
 Rails/SkipsModelValidations:
   Enabled: false
+
+Layout/Tab:
+  Description: "No hard tabs."
+  Enabled: false

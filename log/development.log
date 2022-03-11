@@ -54,3 +54,996 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 2ms (Views: 1.3ms | Allocations: 233)
 
 
+Started GET "/" for 127.0.0.1 at 2022-03-09 16:34:35 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.7.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.7.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 21.3ms | Allocations: 566)
+Completed 200 OK in 66ms (Views: 45.0ms | ActiveRecord: 0.0ms | Allocations: 5129)
+
+
+  [1m[35m (2146.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (759.3ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (51.8ms)[0m  [1m[34mSELECT GET_LOCK('1525287760951218810', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20220309093958)
+  [1m[35m (755.2ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (117.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309093958')[0m
+  [1m[36mTRANSACTION (145.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDetailsToUsers (20220309094136)
+  [1m[35m (636.3ms)[0m  [1m[35mALTER TABLE `users` ADD `phone_number` varchar(255)[0m
+  [1m[35m (541.2ms)[0m  [1m[35mALTER TABLE `users` ADD `age` int[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309094136')[0m
+  [1m[36mTRANSACTION (128.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePosts (20220309094419)
+  [1m[35m (784.9ms)[0m  [1m[35mCREATE TABLE `posts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309094419')[0m
+  [1m[36mTRANSACTION (259.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-03-09 09:44:58.647895', '2022-03-09 09:44:58.647895')[0m
+  [1m[36mTRANSACTION (160.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('1525287760951218810')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-03-09 16:46:18 +0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.7.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.7.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.0ms | Allocations: 368)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1123)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1525287760951218810', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1525287760951218810')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1525287760951218810', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePosts (20220309094419)
+  [1m[35m (537.7ms)[0m  [1m[35mDROP TABLE `posts`[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (137.0ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20220309094419'[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('1525287760951218810')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1525287760951218810', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (56.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePosts (20220309094419)
+  [1m[35m (1445.8ms)[0m  [1m[35mCREATE TABLE `posts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309094419')[0m
+  [1m[36mTRANSACTION (156.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMicroposts (20220310012302)
+  [1m[35m (695.8ms)[0m  [1m[35mCREATE TABLE `microposts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `content` text, `user_id` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220310012302')[0m
+  [1m[36mTRANSACTION (137.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (23.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('1525287760951218810')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-03-10 08:26:30 +0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/microposts" for 127.0.0.1 at 2022-03-10 08:27:06 +0700
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (1.3ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts`[0m
+  ↳ app/views/microposts/index.html.erb:6
+  Rendered microposts/index.html.erb within layouts/application (Duration: 36.3ms | Allocations: 925)
+  Rendered layout layouts/application.html.erb (Duration: 562.4ms | Allocations: 98104)
+Completed 200 OK in 626ms (Views: 564.3ms | ActiveRecord: 1.3ms | Allocations: 101735)
+
+
+Started GET "/microposts/new" for 127.0.0.1 at 2022-03-10 08:27:10 +0700
+Processing by MicropostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 328.0ms | Allocations: 4732)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 330.4ms | Allocations: 5039)
+  Rendered layout layouts/application.html.erb (Duration: 339.2ms | Allocations: 7080)
+Completed 200 OK in 357ms (Views: 340.4ms | ActiveRecord: 4.3ms | Allocations: 11895)
+
+
+Started GET "/microposts" for 127.0.0.1 at 2022-03-10 08:27:27 +0700
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts`[0m
+  ↳ app/views/microposts/index.html.erb:6
+  Rendered microposts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 735)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 2765)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 3032)
+
+
+Started GET "/microposts/new" for 127.0.0.1 at 2022-03-10 08:27:30 +0700
+Processing by MicropostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 5.1ms | Allocations: 830)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 918)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 2948)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 3222)
+
+
+Started GET "/microposts" for 127.0.0.1 at 2022-03-10 08:27:32 +0700
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.5ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts`[0m
+  ↳ app/views/microposts/index.html.erb:6
+  Rendered microposts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 731)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 2761)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.5ms | Allocations: 3027)
+
+
+Started GET "/microposts" for 127.0.0.1 at 2022-03-10 08:27:32 +0700
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (1.1ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts`[0m
+  ↳ app/views/microposts/index.html.erb:6
+  Rendered microposts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 643)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 2684)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 1.1ms | Allocations: 2948)
+
+
+Started GET "/microposts/new" for 127.0.0.1 at 2022-03-10 08:27:34 +0700
+Processing by MicropostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 2.1ms | Allocations: 850)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 938)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2967)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 3234)
+
+
+Started GET "/microposts" for 127.0.0.1 at 2022-03-10 08:27:35 +0700
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.6ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts`[0m
+  ↳ app/views/microposts/index.html.erb:6
+  Rendered microposts/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 731)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 2762)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.6ms | Allocations: 3036)
+
+
+Started GET "/microposts/new" for 127.0.0.1 at 2022-03-10 11:40:33 +0700
+Processing by MicropostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 22.1ms | Allocations: 869)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 23.0ms | Allocations: 958)
+  Rendered layout layouts/application.html.erb (Duration: 379.5ms | Allocations: 14324)
+Completed 200 OK in 792ms (Views: 395.7ms | ActiveRecord: 40.0ms | Allocations: 16399)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 15:43:51 +0700
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-10 15:44:08 +0700
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/rails/info/routes?path=ta" for 127.0.0.1 at 2022-03-10 15:44:09 +0700
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"ta"}
+Completed 200 OK in 4ms (Views: 0.3ms | Allocations: 2688)
+
+
+Started GET "/static_page_home" for 127.0.0.1 at 2022-03-10 15:44:26 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/static_page_home"):
+  
+Started GET "/static_pages/home" for 127.0.0.1 at 2022-03-10 15:44:43 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 50.3ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 317.9ms | Allocations: 13809)
+Completed 200 OK in 420ms (Views: 418.8ms | Allocations: 14708)
+
+
+Started GET "/micropost" for 127.0.0.1 at 2022-03-10 15:45:51 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/micropost"):
+  
+Started GET "/microposts" for 127.0.0.1 at 2022-03-10 15:46:05 +0700
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (310.7ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts`[0m
+  ↳ app/views/microposts/index.html.erb:6
+  Rendered microposts/index.html.erb within layouts/application (Duration: 586.1ms | Allocations: 1090)
+  Rendered layout layouts/application.html.erb (Duration: 594.2ms | Allocations: 3131)
+Completed 200 OK in 599ms (Views: 596.0ms | ActiveRecord: 311.5ms | Allocations: 4363)
+
+
+Started GET "/microposts/new" for 127.0.0.1 at 2022-03-10 15:46:07 +0700
+Processing by MicropostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 7.2ms | Allocations: 1206)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 115.7ms | Allocations: 1503)
+  Rendered layout layouts/application.html.erb (Duration: 124.0ms | Allocations: 3541)
+Completed 200 OK in 130ms (Views: 125.3ms | ActiveRecord: 0.0ms | Allocations: 4703)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2022-03-10 15:48:26 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2197)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2448)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 16:14:47 +0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/microposts" for 127.0.0.1 at 2022-03-10 16:14:49 +0700
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts`[0m
+  ↳ app/views/microposts/index.html.erb:6
+  Rendered microposts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1016)
+  Rendered layout layouts/application.html.erb (Duration: 372.4ms | Allocations: 34608)
+Completed 200 OK in 385ms (Views: 374.2ms | ActiveRecord: 0.4ms | Allocations: 38275)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2022-03-10 16:17:21 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 148)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2551)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3491)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:18:39 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.9ms | Allocations: 154)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2552)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 3457)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:23:21 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.3ms | Allocations: 153)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 4940)
+Completed 500 Internal Server Error in 32ms (Allocations: 5823)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csp_meta_tags' for #<ActionView::Base:0x0000000000e060>
+Did you mean?  csp_meta_tag
+               csrf_meta_tags
+               csrf_meta_tag):
+     7:     <%= csp_meta_tag %>
+     8:     <title><%= yield :title %> | Ruby on Rails Tutorial Sample App</title>
+     9:     <%= csrf_meta_tags %>
+    10:     <%= csp_meta_tags %>
+    11: 
+    12: 
+    13:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:24:02 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.8ms | Allocations: 156)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2597)
+Completed 200 OK in 11ms (Views: 9.0ms | Allocations: 3498)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:25:37 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.1ms | Allocations: 153)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 2579)
+Completed 200 OK in 16ms (Views: 14.1ms | Allocations: 3479)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:25:38 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2203)
+Completed 200 OK in 7ms (Views: 6.3ms | Allocations: 2457)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:25:39 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.3ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2192)
+Completed 200 OK in 10ms (Views: 8.8ms | Allocations: 2442)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:25:40 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 2206)
+Completed 200 OK in 11ms (Views: 10.3ms | Allocations: 2456)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:26:05 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.2ms | Allocations: 154)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 4843)
+Completed 500 Internal Server Error in 29ms (Allocations: 5718)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csp_meta_tags' for #<ActionView::Base:0x0000000000e628>
+Did you mean?  csp_meta_tag
+               csrf_meta_tags
+               csrf_meta_tag):
+     5:     <meta name="viewport" content="width=device-width,initial-scale=1">
+     6:     <title><%= yield :title %> | Ruby on Rails Tutorial Sample App</title>
+     7:     <%= csrf_meta_tags %>
+     8:     <%= csp_meta_tags %>
+     9: 
+    10:     
+    11:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:27:02 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.0ms | Allocations: 153)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 2602)
+Completed 200 OK in 17ms (Views: 15.5ms | Allocations: 3502)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:30:15 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.2ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 2617)
+Completed 200 OK in 16ms (Views: 14.5ms | Allocations: 3517)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:30:16 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2219)
+Completed 200 OK in 7ms (Views: 6.1ms | Allocations: 2470)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:30:17 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2209)
+Completed 200 OK in 6ms (Views: 5.2ms | Allocations: 2459)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:30:18 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2211)
+Completed 200 OK in 11ms (Views: 9.7ms | Allocations: 2461)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:30:18 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.3ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2213)
+Completed 200 OK in 10ms (Views: 9.2ms | Allocations: 2463)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 16:33:02 +0700
+  
+NoMethodError (undefined method `root' for main:Object):
+  
+config/routes.rb:16:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-03-10 16:33:23 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 13711)
+Completed 200 OK in 16ms (Views: 15.4ms | Allocations: 14399)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:40:02 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.9ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 2624)
+Completed 200 OK in 19ms (Views: 17.6ms | Allocations: 3525)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:40:04 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2215)
+Completed 200 OK in 5ms (Views: 4.5ms | Allocations: 2466)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-10 16:40:05 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2211)
+Completed 200 OK in 7ms (Views: 6.1ms | Allocations: 2461)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 16:40:07 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 2373)
+Completed 200 OK in 13ms (Views: 11.7ms | Allocations: 2675)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 16:40:08 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2211)
+Completed 200 OK in 10ms (Views: 8.5ms | Allocations: 2462)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 16:40:08 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2213)
+Completed 200 OK in 10ms (Views: 9.4ms | Allocations: 2463)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 16:40:08 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2209)
+Completed 200 OK in 11ms (Views: 10.3ms | Allocations: 2459)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 16:40:08 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 2205)
+Completed 200 OK in 12ms (Views: 10.9ms | Allocations: 2455)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 16:40:08 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2207)
+Completed 200 OK in 4ms (Views: 3.4ms | Allocations: 2457)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 16:40:09 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2215)
+Completed 200 OK in 5ms (Views: 4.4ms | Allocations: 2465)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 16:48:51 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 4884)
+Completed 500 Internal Server Error in 21ms (Allocations: 5765)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csp_meta_tags' for #<ActionView::Base:0x00000000019ed8>
+Did you mean?  csp_meta_tag
+               csrf_meta_tags
+               csrf_meta_tag):
+     6:     <title><%= yield :title %> | Ruby on Rails Tutorial Sample App</title>
+     7:     <title><%= full_title yield :title %></title>
+     8:     <%= csrf_meta_tags %>
+     9:     <%= csp_meta_tags %>
+    10:     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+    11:     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    12:   </head>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2022-03-10 16:49:14 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 171)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 3024)
+Completed 200 OK in 18ms (Views: 16.1ms | Allocations: 3924)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 16:55:49 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 171)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3139)
+Completed 200 OK in 13ms (Views: 10.9ms | Allocations: 4039)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 17:06:39 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2617)
+Completed 200 OK in 10ms (Views: 9.0ms | Allocations: 2868)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 17:06:41 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2623)
+Completed 200 OK in 11ms (Views: 9.8ms | Allocations: 2873)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 17:07:32 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 171)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 5680)
+Completed 500 Internal Server Error in 33ms (Allocations: 6556)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000001a450>
+Did you mean?  javascript_path
+               javascript_tag):
+     6:       <%= csp_meta_tag %>
+     7:       <%= stylesheet_link_tag 'application', media: 'all',
+     8:          'data-turbolinks-track': 'reload' %>
+     9:       <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10: <!--[if lt IE 9]>
+    11:       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+    12:       <![endif]-->
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2022-03-10 17:07:55 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 171)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 1629)
+Completed 200 OK in 14ms (Views: 11.8ms | Allocations: 2529)
+
+
+Started GET "/microposts" for 127.0.0.1 at 2022-03-10 17:08:15 +0700
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts`[0m
+  ↳ app/views/microposts/index.html.erb:6
+  Rendered microposts/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1089)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2076)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.8ms | Allocations: 3309)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 17:08:19 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1150)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1401)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 17:31:58 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 35.3ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 1171)
+Completed 200 OK in 54ms (Views: 53.4ms | Allocations: 1422)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-10 17:31:59 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 1164)
+Completed 200 OK in 8ms (Views: 7.5ms | Allocations: 1414)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 08:35:26 +0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (27.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 364)
+  Rendered layout layouts/application.html.erb (Duration: 688.6ms | Allocations: 89985)
+Completed 200 OK in 720ms (Views: 705.5ms | ActiveRecord: 0.0ms | Allocations: 94741)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 08:39:10 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 174)
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 256)
+  Rendered layout layouts/application.html.erb (Duration: 128.6ms | Allocations: 3632)
+Completed 200 OK in 131ms (Views: 130.3ms | ActiveRecord: 0.0ms | Allocations: 4537)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 08:41:34 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 195)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 251)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 3701)
+Completed 200 OK in 20ms (Views: 18.2ms | Allocations: 4606)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 08:43:11 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 30)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layout layouts/application.html.erb (Duration: 1175.2ms | Allocations: 102192)
+Completed 200 OK in 1177ms (Views: 1176.0ms | Allocations: 102443)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 08:44:23 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 30)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layout layouts/application.html.erb (Duration: 244.9ms | Allocations: 55735)
+Completed 200 OK in 247ms (Views: 246.1ms | Allocations: 55989)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 08:44:50 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 233)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 251)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 7533)
+Completed 200 OK in 23ms (Views: 21.3ms | Allocations: 8433)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 08:45:12 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 215)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 251)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 7515)
+Completed 200 OK in 25ms (Views: 23.5ms | Allocations: 8420)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 08:46:02 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 127.5ms | Allocations: 9055)
+  Rendered layout layouts/application.html.erb (Duration: 128.3ms | Allocations: 9129)
+Completed 500 Internal Server Error in 133ms (Allocations: 10008)
+
+
+  
+ActionView::Template::Error (The asset "rails.svg" is not present in the asset pipeline.
+):
+    15:    </h2>
+    16:    <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+    17: </div>
+    18: <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"),
+    19:    "https://rubyonrails.org/" %>
+    20: 
+    21: </body>
+  
+app/views/static_pages/home.html.erb:18
+Started GET "/" for 127.0.0.1 at 2022-03-11 08:47:01 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 213)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 251)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 7680)
+Completed 200 OK in 17ms (Views: 15.5ms | Allocations: 8580)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 08:49:55 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 172)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 251)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 7481)
+Completed 200 OK in 14ms (Views: 13.1ms | Allocations: 8381)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 08:51:39 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 251)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7628)
+Completed 200 OK in 17ms (Views: 15.8ms | Allocations: 8528)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 08:54:23 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 7476)
+Completed 200 OK in 20ms (Views: 18.2ms | Allocations: 8376)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:00:43 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layout layouts/application.html.erb (Duration: 227.7ms | Allocations: 56924)
+Completed 200 OK in 229ms (Views: 228.4ms | Allocations: 57175)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:03:56 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 177)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 7390)
+Completed 200 OK in 19ms (Views: 17.5ms | Allocations: 8291)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:04:34 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 6796)
+Completed 200 OK in 11ms (Views: 10.2ms | Allocations: 7048)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:05:54 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 6826)
+Completed 200 OK in 11ms (Views: 10.1ms | Allocations: 7076)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:12:06 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 9727)
+Completed 500 Internal Server Error in 23ms (Allocations: 10602)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_rails_default with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/minh/Documents/sample_app/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-7.0.2.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-7.0.2.3/app/views"
+
+Did you mean?  layouts/header
+               layouts/action_text/contents/content
+               active_storage/blobs/blob
+               microposts/micropost
+               action_text/attachables/remote_image
+               microposts/form):
+     8: 
+     9:    <%= javascript_include_tag "application", "data-
+    10:    turbolinks-track": "reload" %>
+    11:    <%= render "layouts/rails_default" %>
+    12:    <%= render "layouts/shim" %>
+    13: </head>
+    14: <body>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:12:35 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 171)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 9840)
+Completed 500 Internal Server Error in 23ms (Allocations: 10715)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_shim with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/minh/Documents/sample_app/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-7.0.2.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-7.0.2.3/app/views"
+
+Did you mean?  layouts/header
+               layouts/action_text/contents/content
+               microposts/form
+               action_text/attachables/missing_attachable
+               microposts/micropost
+               action_text/attachment_galleries/attachment_gallery):
+     8: 
+     9:    <%= javascript_include_tag "application", "data-
+    10:    turbolinks-track": "reload" %>
+    11:    <%= render "layouts/shim" %>
+    12: </head>
+    13: <body>
+    14:    <%= render "layouts/header" %>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:12:43 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 10046)
+Completed 500 Internal Server Error in 34ms (Allocations: 10921)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/minh/Documents/sample_app/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-7.0.2.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-7.0.2.3/app/views"
+
+Did you mean?  layouts/header
+               layouts/action_text/contents/content
+               microposts/form
+               action_text/contents/content
+               active_storage/blobs/blob
+               microposts/micropost):
+    14:    <%= render "layouts/header" %>
+    15:    <div class="container">
+    16:       <%= yield %>
+    17:       <%= render "layouts/footer" %>
+    18:    </div>
+    19: </body>
+    20: </html>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:12:49 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 249)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 7505)
+Completed 200 OK in 19ms (Views: 18.0ms | Allocations: 8406)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:13:13 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 18)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layout layouts/application.html.erb (Duration: 235.2ms | Allocations: 57256)
+Completed 200 OK in 237ms (Views: 236.3ms | Allocations: 57507)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:13:39 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 177)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 249)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 7505)
+Completed 200 OK in 19ms (Views: 16.9ms | Allocations: 8405)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:14:32 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 524)
+Completed 200 OK in 8ms (Views: 6.1ms | Allocations: 1424)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:15:11 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 7230)
+Completed 200 OK in 25ms (Views: 23.7ms | Allocations: 8130)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:16:21 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 230)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 7289)
+Completed 200 OK in 19ms (Views: 17.4ms | Allocations: 8189)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:16:32 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 7277)
+Completed 200 OK in 23ms (Views: 21.6ms | Allocations: 8178)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:17:48 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 217)
+  Rendered layout layouts/application.html.erb (Duration: 248.0ms | Allocations: 57710)
+Completed 200 OK in 253ms (Views: 251.0ms | Allocations: 58610)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:18:20 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 7299)
+Completed 200 OK in 18ms (Views: 17.4ms | Allocations: 8199)
+
+
