@@ -1,0 +1,35 @@
+vi:
+  tutorial: "Hướng dẫn Ruby On Rails"
+  default_title: "Ứng dụng demo Ruby On Rails"
+  the: ""
+  english: "Tiếng Anh"
+  vietnam: "Việt Nam"
+  layouts:
+    application:
+      default_title: " | Hướng dẫn Ruby On Rails"
+  static_pages:
+    home:
+      title: "Trang chủ"
+      welcome: "Chào mừng đến với ứng dụng demo"
+      intro_1: "Đây là trang chủ của "
+      intro_2: "ứng dụng demo"
+      signup: "Đăng ký ngay !"
+    help:
+      title: "Trợ giúp"
+      intro_1: "Để được trợ giúp về Rails Tutorial, hãy xem"
+      page: "Trang trợ giúp Rails Tutorial"
+      tutorial: "Trang Hướng Dẫn Ruby on Rails"
+      intro_2: "Để được trợ giúp về ứng dụng demo, hãy xem"
+    about:
+      title: "About"
+      rails_tutorial: "Hướng dẫn Ruby on Rails"
+      learn_enough: "Học đủ"
+      book: "sách"
+      screencast: "loạt screencast"
+      rails: "Ruby on Rails"
+      intro_1: "các"
+      intro_2: ",một phần của"
+      intro_3: "gia đình hướng dẫn là một"
+      intro_4: "và"
+      intro_5: "dạy phát triển web với"
+      intro_6: ".Dây là ứng dụng mẫu cho hướng dẫn."
