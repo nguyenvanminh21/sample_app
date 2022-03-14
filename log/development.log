@@ -2759,3 +2759,863 @@ Processing by StaticPagesController#help as HTML
 Completed 200 OK in 9ms (Views: 6.2ms | Allocations: 3125)
 
 
+Started GET "/" for 127.0.0.1 at 2022-03-14 10:50:47 +0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (26.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 56.7ms | Allocations: 6012)
+  Rendered layout layouts/application.html.erb (Duration: 58.9ms | Allocations: 6089)
+Completed 500 Internal Server Error in 731ms (ActiveRecord: 0.0ms | Allocations: 107255)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<ActionView::Base:0x0000000000ceb8>):
+     7:     <%= t ".intro_2" %>
+     8:   </h2>
+     9: 
+    10:   <%= link_to t(".sign_up"), signup_path, class: "btn btn-lg btn primary" %>
+    11: </div>
+    12: 
+    13: <%= link_to image_tag("rails.png", alt: "Rails logo", class: "logo"), Settings.url.ruby_on_rails %>
+  
+app/views/static_pages/home.html.erb:10
+Started GET "/" for 127.0.0.1 at 2022-03-14 10:53:56 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 205.5ms | Allocations: 272490)
+  Rendered layout layouts/application.html.erb (Duration: 206.1ms | Allocations: 272565)
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 0.0ms | Allocations: 273831)
+
+
+  
+ActionView::Template::Error (The asset "rails.png" is not present in the asset pipeline.
+):
+    10:   <%= link_to t(".sign_up"), '#', class: "btn btn-lg btn primary" %>
+    11: </div>
+    12: 
+    13: <%= link_to image_tag("rails.png", alt: "Rails logo", class: "logo"), Settings.url.ruby_on_rails %>
+  
+app/views/static_pages/home.html.erb:13
+Started GET "/" for 127.0.0.1 at 2022-03-14 10:56:07 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 330)
+  Rendered layout layouts/application.html.erb (Duration: 204.0ms | Allocations: 25773)
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 0.0ms | Allocations: 27102)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/minh/Downloads/sample_app/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-7.0.2.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-7.0.2.3/app/views"
+
+Did you mean?  layouts/action_text/contents/content
+               active_storage/blobs/blob
+               action_text/attachables/remote_image
+               action_text/contents/content
+               action_text/attachment_galleries/attachment_gallery
+               action_text/attachables/missing_attachable):
+    11:     <%= javascript_importmap_tags %>
+    12:   </head>
+    13:   <body>
+    14:      <%= render "layouts/header" %>
+    15:     <div class="container">
+    16:       <%= yield %>      
+    17:     </div>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2022-03-14 10:58:28 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 320)
+  Rendered layouts/_header.html.erb (Duration: 15.3ms | Allocations: 4617)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 7297)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 8563)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_path' for #<ActionView::Base:0x00000000011800>):
+    3:     <%= link_to "sample_app", "#", id: "logo" %>
+    4:     <nav>
+    5:       <ul class="nav navbar-nav navbar-right">
+    6:         <li><%= link_to t(".home"), home_path %></li>
+    7:         <li><%= link_to t(".help"), help_path %></li>
+    8:         <li><%= link_to t(".contact"), contact_path %></li>
+    9:         <li><%= link_to t(".login"), "#" %></li>
+  
+app/views/layouts/_header.html.erb:6
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:10:00 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 131)
+  Rendered layouts/_header.html.erb (Duration: 49.6ms | Allocations: 4356)
+  Rendered layout layouts/application.html.erb (Duration: 63.9ms | Allocations: 6529)
+Completed 500 Internal Server Error in 69ms (Allocations: 7141)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_path' for #<ActionView::Base:0x00000000011b70>):
+    3:     <%= link_to "sample_app", "#", id: "logo" %>
+    4:     <nav>
+    5:       <ul class="nav navbar-nav navbar-right">
+    6:         <li><%= link_to t(".home"), home_path %></li>
+    7:         <li><%= link_to t(".help"), help_path %></li>
+    8:         <li><%= link_to t(".contact"), contact_path %></li>
+    9:         <li><%= link_to t(".login"), "#" %></li>
+  
+app/views/layouts/_header.html.erb:6
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:12:07 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2156)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2230)
+Completed 500 Internal Server Error in 10ms (Allocations: 3488)
+
+
+  
+ActionView::Template::Error (The asset "rails.svg" is not present in the asset pipeline.
+):
+     7: </h2>
+     8: <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+     9: </div>
+    10: <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"),
+    11: 
+    12: "https://rubyonrails.org/" %>
+  
+app/views/static_pages/home.html.erb:10
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:12:36 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 20.8ms | Allocations: 16607)
+  Rendered layouts/_header.html.erb (Duration: 12.5ms | Allocations: 4593)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 23430)
+Completed 500 Internal Server Error in 41ms (Allocations: 24042)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_path' for #<ActionView::Base:0x000000000121d8>):
+    3:     <%= link_to "sample_app", "#", id: "logo" %>
+    4:     <nav>
+    5:       <ul class="nav navbar-nav navbar-right">
+    6:         <li><%= link_to t(".home"), home_path %></li>
+    7:         <li><%= link_to t(".help"), help_path %></li>
+    8:         <li><%= link_to t(".contact"), contact_path %></li>
+    9:         <li><%= link_to t(".login"), "#" %></li>
+  
+app/views/layouts/_header.html.erb:6
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:14:26 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.7ms | Allocations: 826)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 3688)
+Completed 200 OK in 19ms (Views: 15.3ms | Allocations: 4980)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:17:07 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 815)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3223)
+Completed 200 OK in 11ms (Views: 8.0ms | Allocations: 4589)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:17:08 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 657)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2681)
+Completed 200 OK in 14ms (Views: 10.6ms | Allocations: 3408)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:17:09 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 655)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2675)
+Completed 200 OK in 12ms (Views: 9.4ms | Allocations: 3407)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:17:09 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 655)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 2675)
+Completed 200 OK in 13ms (Views: 10.2ms | Allocations: 3397)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:19:46 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1744)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 1818)
+Completed 500 Internal Server Error in 14ms (Allocations: 3164)
+
+
+  
+ActionView::Template::Error (undefined method `link' for nil:NilClass):
+    2: <div class="center jumbotron">
+    3:   <h1><%= t ".title" %></h1>
+    4:   <h2>
+    5:     <%= t ".intro_1" %><%= link_to t(".intro_2"), Settings.settings.link %>
+    6:   </h2>
+    7:   <%= link_to t(".signup") , '#', class: "btn btn-lg btn-primary" %>
+    8: </div>
+  
+app/views/static_pages/home.html.erb:5
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:20:31 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1784)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1858)
+Completed 500 Internal Server Error in 9ms (Allocations: 3211)
+
+
+  
+ActionView::Template::Error (undefined method `link' for nil:NilClass):
+    2: <div class="center jumbotron">
+    3:   <h1><%= t ".title" %></h1>
+    4:   <h2>
+    5:     <%= t ".intro_1" %><%= link_to t(".railstutorial"), Settings.settings.link %>
+    6:   </h2>
+    7:   <%= link_to t(".signup") , '#', class: "btn btn-lg btn-primary" %>
+    8: </div>
+  
+app/views/static_pages/home.html.erb:5
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:21:25 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1739)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1813)
+Completed 500 Internal Server Error in 11ms (Allocations: 3166)
+
+
+  
+ActionView::Template::Error (undefined method `link' for nil:NilClass):
+    2: <div class="center jumbotron">
+    3:   <h1><%= t ".title" %></h1>
+    4:   <h2>
+    5:     <%= t ".intro_1" %><%= link_to t(".rails_tutorial"), Settings.settings.link %>
+    6:   </h2>
+    7:   <%= link_to t(".signup") , '#', class: "btn btn-lg btn-primary" %>
+    8: </div>
+  
+app/views/static_pages/home.html.erb:5
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:21:28 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1550)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1624)
+Completed 500 Internal Server Error in 10ms (Allocations: 2331)
+
+
+  
+ActionView::Template::Error (undefined method `link' for nil:NilClass):
+    2: <div class="center jumbotron">
+    3:   <h1><%= t ".title" %></h1>
+    4:   <h2>
+    5:     <%= t ".intro_1" %><%= link_to t(".rails_tutorial"), Settings.settings.link %>
+    6:   </h2>
+    7:   <%= link_to t(".signup") , '#', class: "btn btn-lg btn-primary" %>
+    8: </div>
+  
+app/views/static_pages/home.html.erb:5
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-03-14 11:21:55 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.4ms | Allocations: 441)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3028)
+Completed 200 OK in 8ms (Views: 6.2ms | Allocations: 3811)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2022-03-14 11:21:57 +0700
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 1.9ms | Allocations: 724)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2911)
+Completed 200 OK in 8ms (Views: 5.8ms | Allocations: 3698)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2022-03-14 11:22:39 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1744)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1818)
+Completed 500 Internal Server Error in 7ms (Allocations: 3152)
+
+
+  
+ActionView::Template::Error (undefined method `rails_tutorial' for nil:NilClass):
+    3:   <h1><%= t ".title" %></h1>
+    4:   <h2>
+    5:     <%= t ".intro_1" %>
+    6:     <%= link_to t(".rails_tutorial"), Settings.settings.rails_tutorial %>
+    7:   </h2>
+    8:   <%= link_to t(".signup") , '#', class: "btn btn-lg btn-primary" %>
+    9: </div>
+  
+app/views/static_pages/home.html.erb:6
+Started GET "/static_pages/home" for 127.0.0.1 at 2022-03-14 11:23:13 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 383)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2928)
+Completed 200 OK in 15ms (Views: 10.6ms | Allocations: 4294)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2022-03-14 11:24:23 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 381)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2910)
+Completed 200 OK in 14ms (Views: 9.6ms | Allocations: 4275)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/rails-%3Clong%20string%3E.svg"):
+  
+Started GET "/static_pages/home" for 127.0.0.1 at 2022-03-14 11:27:01 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 379)
+  Rendered layouts/_header.html.erb (Duration: 56.7ms | Allocations: 4593)
+  Rendered layout layouts/application.html.erb (Duration: 67.8ms | Allocations: 7305)
+Completed 500 Internal Server Error in 75ms (Allocations: 8655)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_path' for #<ActionView::Base:0x00000000013ce0>):
+    3:     <%= link_to "sample_app", "#", id: "logo" %>
+    4:     <nav>
+    5:       <ul class="nav navbar-nav navbar-right">
+    6:         <li><%= link_to t(".home"), home_path %></li>
+    7:         <li><%= link_to t(".help"), help_path %></li>
+    8:         <li><%= link_to t(".contact"), contact_path %></li>
+    9:         <li><%= link_to t(".login"), "#" %></li>
+  
+app/views/layouts/_header.html.erb:6
+app/views/layouts/application.html.erb:14
+Started GET "/static_pages/home" for 127.0.0.1 at 2022-03-14 11:27:46 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.7ms | Allocations: 378)
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 828)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 3554)
+Completed 200 OK in 22ms (Views: 17.8ms | Allocations: 4936)
+
+
+Started GET "/en" for 127.0.0.1 at 2022-03-14 11:27:49 +0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 180)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 2753)
+Completed 200 OK in 10ms (Views: 7.7ms | Allocations: 3468)
+
+
+Started GET "/vi" for 127.0.0.1 at 2022-03-14 11:27:49 +0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 197)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2756)
+Completed 200 OK in 13ms (Views: 10.2ms | Allocations: 3546)
+
+
+Started GET "/en" for 127.0.0.1 at 2022-03-14 11:27:51 +0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 180)
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2738)
+Completed 200 OK in 11ms (Views: 8.0ms | Allocations: 3460)
+
+
+Started GET "/en" for 127.0.0.1 at 2022-03-14 11:28:15 +0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 378)
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 761)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3471)
+Completed 200 OK in 16ms (Views: 12.2ms | Allocations: 4840)
+
+
+Started GET "/en" for 127.0.0.1 at 2022-03-14 11:28:56 +0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 381)
+  Rendered layouts/_header.html.erb (Duration: 3.1ms | Allocations: 797)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 3510)
+Completed 200 OK in 23ms (Views: 18.6ms | Allocations: 4873)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/rails-%3Clong%20string%3E.svg"):
+  
+Started GET "/en" for 127.0.0.1 at 2022-03-14 11:29:05 +0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 378)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 797)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3507)
+Completed 200 OK in 13ms (Views: 10.2ms | Allocations: 4878)
+
+
+Started GET "/en" for 127.0.0.1 at 2022-03-14 11:31:38 +0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 10270)
+Completed 500 Internal Server Error in 31ms (Allocations: 11583)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/minh/Downloads/sample_app/app/assets/config
+  /home/minh/Downloads/sample_app/app/assets/images
+  /home/minh/Downloads/sample_app/app/assets/stylesheets
+  /var/lib/gems/2.7.0/gems/turbo-rails-1.0.1/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/stimulus-rails-1.0.4/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/importmap-rails-1.0.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/actiontext-7.0.2.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/actiontext-7.0.2.3/app/assets/stylesheets
+  /var/lib/gems/2.7.0/gems/actioncable-7.0.2.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/activestorage-7.0.2.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/actionview-7.0.2.3/lib/assets/compiled
+  /var/lib/gems/2.7.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/minh/Downloads/sample_app/app/javascript
+  /home/minh/Downloads/sample_app/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", media: "all",
+    10:     "data-turbolinks-track": "reload" %>
+    11:     <%= javascript_importmap_tags %>
+    12:   </head>
+  
+app/assets/stylesheets/custom.scss:1
+app/views/layouts/application.html.erb:9
+Started GET "/en" for 127.0.0.1 at 2022-03-14 11:33:09 +0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 8902)
+Completed 500 Internal Server Error in 16ms (Allocations: 9779)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/minh/Downloads/sample_app/app/assets/config
+  /home/minh/Downloads/sample_app/app/assets/images
+  /home/minh/Downloads/sample_app/app/assets/stylesheets
+  /var/lib/gems/2.7.0/gems/turbo-rails-1.0.1/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/stimulus-rails-1.0.4/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/importmap-rails-1.0.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/actiontext-7.0.2.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/actiontext-7.0.2.3/app/assets/stylesheets
+  /var/lib/gems/2.7.0/gems/actioncable-7.0.2.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/activestorage-7.0.2.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/actionview-7.0.2.3/lib/assets/compiled
+  /var/lib/gems/2.7.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/minh/Downloads/sample_app/app/javascript
+  /home/minh/Downloads/sample_app/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", media: "all",
+    10:     "data-turbolinks-track": "reload" %>
+    11:     <%= javascript_importmap_tags %>
+    12:   </head>
+  
+app/assets/stylesheets/custom.scss:1
+app/views/layouts/application.html.erb:9
+Started GET "/en" for 127.0.0.1 at 2022-03-14 11:34:39 +0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 13453)
+Completed 500 Internal Server Error in 25ms (Allocations: 14330)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/minh/Downloads/sample_app/app/assets/config
+  /home/minh/Downloads/sample_app/app/assets/images
+  /home/minh/Downloads/sample_app/app/assets/stylesheets
+  /var/lib/gems/2.7.0/gems/turbo-rails-1.0.1/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/stimulus-rails-1.0.4/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/importmap-rails-1.0.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/actiontext-7.0.2.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/actiontext-7.0.2.3/app/assets/stylesheets
+  /var/lib/gems/2.7.0/gems/actioncable-7.0.2.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/activestorage-7.0.2.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/actionview-7.0.2.3/lib/assets/compiled
+  /var/lib/gems/2.7.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/minh/Downloads/sample_app/app/javascript
+  /home/minh/Downloads/sample_app/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", media: "all",
+    10:     "data-turbolinks-track": "reload" %>
+    11:     <%= javascript_importmap_tags %>
+    12:   </head>
+  
+app/assets/stylesheets/custom.scss:1
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:34:42 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 9554)
+Completed 500 Internal Server Error in 12ms (Allocations: 10433)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/minh/Downloads/sample_app/app/assets/config
+  /home/minh/Downloads/sample_app/app/assets/images
+  /home/minh/Downloads/sample_app/app/assets/stylesheets
+  /var/lib/gems/2.7.0/gems/turbo-rails-1.0.1/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/stimulus-rails-1.0.4/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/importmap-rails-1.0.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/actiontext-7.0.2.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/actiontext-7.0.2.3/app/assets/stylesheets
+  /var/lib/gems/2.7.0/gems/actioncable-7.0.2.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/activestorage-7.0.2.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/actionview-7.0.2.3/lib/assets/compiled
+  /var/lib/gems/2.7.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/minh/Downloads/sample_app/app/javascript
+  /home/minh/Downloads/sample_app/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", media: "all",
+    10:     "data-turbolinks-track": "reload" %>
+    11:     <%= javascript_importmap_tags %>
+    12:   </head>
+  
+app/assets/stylesheets/custom.scss:1
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:36:18 +0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 644)
+  Rendered layout layouts/application.html.erb (Duration: 2398.7ms | Allocations: 1571162)
+Completed 500 Internal Server Error in 2533ms (ActiveRecord: 0.0ms | Allocations: 1672215)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: colors.
+Load paths:
+  /home/minh/Downloads/sample_app/app/assets/config
+  /home/minh/Downloads/sample_app/app/assets/images
+  /home/minh/Downloads/sample_app/app/assets/stylesheets
+  /var/lib/gems/2.7.0/gems/turbo-rails-1.0.1/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/stimulus-rails-1.0.4/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/importmap-rails-1.0.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/actiontext-7.0.2.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/actiontext-7.0.2.3/app/assets/stylesheets
+  /var/lib/gems/2.7.0/gems/actioncable-7.0.2.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/activestorage-7.0.2.3/app/assets/javascripts
+  /var/lib/gems/2.7.0/gems/actionview-7.0.2.3/lib/assets/compiled
+  /var/lib/gems/2.7.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /var/lib/gems/2.7.0/gems/bootstrap-sass-3.4.1/assets/stylesheets
+  /var/lib/gems/2.7.0/gems/bootstrap-sass-3.4.1/assets/javascripts
+  /var/lib/gems/2.7.0/gems/bootstrap-sass-3.4.1/assets/fonts
+  /var/lib/gems/2.7.0/gems/bootstrap-sass-3.4.1/assets/images
+  /home/minh/Downloads/sample_app/app/javascript
+  /home/minh/Downloads/sample_app/vendor/javascript):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", media: "all",
+    10:     "data-turbolinks-track": "reload" %>
+    11:     <%= javascript_importmap_tags %>
+    12:   </head>
+  
+app/assets/stylesheets/custom.scss:3
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:36:57 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 181)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 1283)
+  Rendered layout layouts/application.html.erb (Duration: 1799.7ms | Allocations: 1402429)
+Completed 200 OK in 1804ms (Views: 1800.6ms | ActiveRecord: 0.0ms | Allocations: 1403164)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:37:38 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 180)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 551)
+  Rendered layout layouts/application.html.erb (Duration: 1255.8ms | Allocations: 1316154)
+Completed 200 OK in 1258ms (Views: 1256.4ms | ActiveRecord: 0.0ms | Allocations: 1316891)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:38:22 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 180)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 550)
+  Rendered layout layouts/application.html.erb (Duration: 1246.9ms | Allocations: 1316922)
+Completed 200 OK in 1250ms (Views: 1247.6ms | ActiveRecord: 0.0ms | Allocations: 1317644)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:42:57 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 385)
+  Rendered layouts/_header.html.erb (Duration: 12.0ms | Allocations: 4545)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 14776)
+Completed 500 Internal Server Error in 26ms (Allocations: 16189)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_path' for #<ActionView::Base:0x00000000013ad8>):
+    3:     <%= link_to "sample_app", "#", id: "logo" %>
+    4:     <nav>
+    5:       <ul class="nav navbar-nav navbar-right">
+    6:         <li><%= link_to t(".home"), home_path %></li>
+    7:         <li><%= link_to t(".help"), help_path %></li>
+    8:         <li><%= link_to t(".contact"), contact_path %></li>
+    9:         <li><%= link_to t(".login"), "#" %></li>
+  
+app/views/layouts/_header.html.erb:6
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:43:17 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 181)
+  Rendered layouts/_header.html.erb (Duration: 16.0ms | Allocations: 4611)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 14272)
+Completed 500 Internal Server Error in 33ms (Allocations: 15414)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `contact_path' for #<ActionView::Base:0x000000000177c8>
+Did you mean?  controller_path):
+     5:       <ul class="nav navbar-nav navbar-right">
+     6:         <li><%= link_to t(".home"), home_path %></li>
+     7:         <li><%= link_to t(".help"), help_path %></li>
+     8:         <li><%= link_to t(".contact"), contact_path %></li>
+     9:         <li><%= link_to t(".login"), "#" %></li>
+    10:         <li><%= link_to t(".english"), locale: :en %></li>
+    11:         <li><%= link_to t(".vietnam"), locale: :vi %></li>
+  
+app/views/layouts/_header.html.erb:8
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2022-03-14 11:43:39 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 378)
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 1324)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 8995)
+Completed 200 OK in 24ms (Views: 20.1ms | Allocations: 10366)
+
+
+Started GET "/en/help" for 127.0.0.1 at 2022-03-14 11:43:41 +0700
+Processing by StaticPagesController#help as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.9ms | Allocations: 445)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 648)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 8073)
+Completed 200 OK in 17ms (Views: 14.5ms | Allocations: 8858)
+
+
+Started GET "/en/home" for 127.0.0.1 at 2022-03-14 11:43:41 +0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 180)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 640)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 7789)
+Completed 200 OK in 22ms (Views: 19.7ms | Allocations: 8496)
+
+
+Started GET "/en/help" for 127.0.0.1 at 2022-03-14 11:43:43 +0700
+Processing by StaticPagesController#help as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.8ms | Allocations: 178)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 640)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 7790)
+Completed 200 OK in 21ms (Views: 18.0ms | Allocations: 8510)
+
+
+Started GET "/en/home" for 127.0.0.1 at 2022-03-14 11:43:43 +0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 180)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 639)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 7789)
+Completed 200 OK in 15ms (Views: 12.9ms | Allocations: 8499)
+
+
+Started GET "/en/about" for 127.0.0.1 at 2022-03-14 11:43:44 +0700
+Processing by StaticPagesController#about as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 4.2ms | Allocations: 724)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 648)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 8352)
+Completed 200 OK in 24ms (Views: 20.1ms | Allocations: 9112)
+
+
+Started GET "/en/home" for 127.0.0.1 at 2022-03-14 11:43:45 +0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 180)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 639)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 7788)
+Completed 200 OK in 11ms (Views: 9.4ms | Allocations: 8505)
+
+
+Started GET "/en/home" for 127.0.0.1 at 2022-03-14 11:46:13 +0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 378)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 884)
+  Rendered layouts/_footer.html.erb (Duration: 1.4ms | Allocations: 758)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 9445)
+Completed 200 OK in 25ms (Views: 21.0ms | Allocations: 10814)
+
+
+Started GET "/en/home" for 127.0.0.1 at 2022-03-14 11:47:50 +0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 180)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 641)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 510)
+  Rendered layout layouts/application.html.erb (Duration: 1207.6ms | Allocations: 1322819)
+Completed 200 OK in 1212ms (Views: 1208.6ms | Allocations: 1323530)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-15 08:21:29 +0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (23.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 19.6ms | Allocations: 644)
+  Rendered layouts/_header.html.erb (Duration: 23.3ms | Allocations: 1433)
+  Rendered layouts/_footer.html.erb (Duration: 12.0ms | Allocations: 760)
+  Rendered layout layouts/application.html.erb (Duration: 584.7ms | Allocations: 314559)
+Completed 200 OK in 1323ms (Views: 611.1ms | ActiveRecord: 0.0ms | Allocations: 415364)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-15 08:55:13 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 181)
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 1139)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 510)
+  Rendered layout layouts/application.html.erb (Duration: 1685.6ms | Allocations: 1333647)
+Completed 200 OK in 1688ms (Views: 1686.5ms | Allocations: 1334829)
+
+
+  [1m[35m (13.8ms)[0m  [1m[34mSELECT GET_LOCK('1525287760951218810', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20220315031336)
+  [1m[35m (1129.9ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (21.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220315031336')[0m
+  [1m[36mTRANSACTION (146.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (68.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (35.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1525287760951218810')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES ('MinhNguyen', 'minhnguyen@gmail.com', '2022-03-15 03:42:20.331321', '2022-03-15 03:42:20.331321')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Update (38.7ms)[0m  [1m[33mUPDATE `users` SET `users`.`name` = 'Minh', `users`.`updated_at` = '2022-03-15 03:46:17.518458' WHERE `users`.`id` = 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES (NULL, NULL, '2022-03-15 03:48:45.308436', '2022-03-15 03:48:45.308436')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1525287760951218810', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddIndexToUsersEmail (20220315040138)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220315040138')[0m
+  [1m[36mTRANSACTION (133.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('1525287760951218810')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
