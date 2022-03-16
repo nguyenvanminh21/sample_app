@@ -33,3 +33,15 @@ vi:
       intro_4: "và"
       intro_5: "dạy phát triển web với"
       intro_6: ".Dây là ứng dụng mẫu cho hướng dẫn."
+  users:
+    not_found: "Không tìm thấy người dùng"
+    new:
+      title: "Đăng ký"
+      header: "Đăng ký"
+      submit: "Tạo tài khoản"
+      success: "Chào mừng"
+      failed: "Đăng ký thất bại"
+  shared:
+    error_messages:
+      prefix: "Có %{err_suffix} trong thông tin đăng ký"
+      singular: "lỗi"
