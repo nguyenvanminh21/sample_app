@@ -5,9 +5,15 @@ url:
   screencasts: "https://screencasts.railstutorial.org/"
   learnenough: "https://www.learnenough.com/"
   rubyonrails: "https://rubyonrails.org/"
+  newuser: "http://127.0.0.1:3000/signup"
 regex:
   email: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/'
 length:
   length_8: 8
   length_25: 25
   length_255: 255
+gravatar:
+  size:
+    default: 60
+    size_200: 200
+  url: "https://secure.gravatar.com/avatar"

@@ -70,3 +70,5 @@ yarn-debug.log*
 .yarn-integrity
 log/development.log
 test/
+.framgia-ci-reports/
+.framgia-ci-result.temp.yml
