@@ -19,7 +19,7 @@ gem "stimulus-rails"
 gem "turbo-rails"
 gem "turbolinks", "5.2.0"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "webpacker", "4.0.7"
+gem "webpacker", "~> 3.5"
 group :development, :test do
   gem "debug", platforms: [:mri, :mingw, :x64_mingw]
 end
